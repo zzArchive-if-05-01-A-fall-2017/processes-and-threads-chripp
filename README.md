@@ -16,7 +16,7 @@ You do not need to implement pipes or re-direction of standard input and standar
 - Implement this shell in Java
 
 ### Fibonacci Sequence
-Write a Java program computing the Fibonacci Numbers. Use the NetBeans Project `FibonacciNumbers` as a basis. This project already contains a single threaded Java solution (`Fibonacci.getNumberSingle(n)`). Extend this project by implementing the method `getNumberMulti(n)`. This method should use two worker threads. One for the calculation of fib(*n* - 1) and the second for calculating fib(*n*-2).
+Write a Java program computing the Fibonacci Numbers. Use the NetBeans Project `FibonacciParallel` as a basis. This project already contains a single threaded Java solution (`Fibonacci.getNumberSingle(n)`). Extend this project by implementing the method `getNumberMulti(n)`. This method should use two worker threads. One for the calculation of fib(*n* - 1) and the second for calculating fib(*n*-2).
 
 - Extend the Java Project such that it uses two worker threads.
 - Try and examine the run time performance of both solutions. Which is more efficient.
