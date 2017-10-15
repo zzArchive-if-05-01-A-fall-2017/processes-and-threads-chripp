@@ -37,15 +37,24 @@ public class Fibonacci {
     }
 
     static int getNumberParallel(int n) {
-        Thread t1 = new Thread(new Runnable() {
-
-            @Override
-            public void run() {
-                
-            }
+        if (n < 2) {
+           return 1;
+        }
+        MyRunnable a = new MyRunnable(n-1);
+        MyRunnable b = new MyRunnable(n-2);
+        Thread thread = new Thread(a);
+        Thread thread2 = new Thread(b);
+        thread.start();
+        thread2.start();
+        try {
+            thread.join();
+            thread2.join();
+        } catch (InterruptedException e) {
             
-        });
-        return 1;
+        }
+
+        return a.x + b.x;
+
     }
     
 }

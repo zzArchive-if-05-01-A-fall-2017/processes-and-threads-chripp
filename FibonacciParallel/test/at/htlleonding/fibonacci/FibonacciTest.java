@@ -74,10 +74,11 @@ public class FibonacciTest {
     }
     
     @Test
-    @Ignore
     public void testLarge() {
         assertEquals(1_836_311_903, Fibonacci.getNumberSingle(N));
     }
     
-    public void testParallel
+    public void testParallel() {
+        assertEquals(1_836_311_903, Fibonacci.getNumberParallel(N));
+    }
 }
